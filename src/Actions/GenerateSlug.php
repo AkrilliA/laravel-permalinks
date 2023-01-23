@@ -9,11 +9,11 @@ class GenerateSlug
 {
     public function execute(string $name): string
     {
-        $slug = Str::of($name)->slug();
+        $slug = Str::slug($name);
         $slugAppendix = config('permalinks.slug_appendix', 4);
 
         while (Permalink::query()->where('slug', $slug)->exists()) {
-            $slug = Str::of($name)->slug() . '-' . Str::random($slugAppendix);
+            $slug = Str::slug($name) . '-' . Str::random($slugAppendix);
         }
 
         return $slug;
