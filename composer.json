@@ -1,0 +1,48 @@
+{
+    "name": "akrillia/laravel-permalinks",
+    "type": "library",
+    "license": "ISC",
+    "version": "5.4.1",
+    "autoload": {
+        "psr-4": {
+            "AkrilliA\\LaravelPermalinks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Gaal",
+            "email": "alexander.gaal@gipfel.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0",
+        "illuminate/console": "^9.0|^10.0",
+        "illuminate/database": "^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPermalinksServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "orchestra/testbench": "^7.0",
+        "laravel/pint": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    }
+}
