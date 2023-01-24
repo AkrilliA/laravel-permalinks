@@ -28,7 +28,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelPermalinksServiceProvider"
+                "AkrilliA\\LaravelPermalinks\\LaravelPermalinksServiceProvider"
             ]
         }
     },

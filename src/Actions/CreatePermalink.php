@@ -7,8 +7,12 @@ use AkrilliA\LaravelPermalinks\Models\Permalink;
 
 class CreatePermalink
 {
-    public function execute(string $slug, string $url): Permalink
+    public static function execute(string $url, string $slug = null): Permalink
     {
+        if ($slug === null) {
+            $slug = GenerateSlug::execute($url);
+        }
+
         $exists = Permalink::query()->where('slug', $slug)->exists();
 
         if ($exists) {

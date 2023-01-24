@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class GenerateSlug
 {
-    public function execute(string $name): string
+    public static function execute(string $name): string
     {
         $slug = Str::slug($name);
         $slugAppendix = config('permalinks.slug_appendix', 4);
