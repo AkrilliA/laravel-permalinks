@@ -25,18 +25,18 @@ To create a permalink, you first need to generate a slug and then create the per
 
 ### Generate a slug
 ```php
-$slug = GenerateSlug::execute($url);
+$slug = GenerateSlug::execute($name);
 ```
 
 
 ### Create a permalink link
 ```php
-$permalink = CreatePermalink::execute($url, $slug);
+$permalink = Permalink::create($url, $slug);
 ```
 
-Alternatively you can call
+Alternatively you can call, which will automatically create a slug based on the URL.
 ```php
-$permalink = CreatePermalink::execute($url);
+$permalink = Permalink::create($url);
 ```
 
 
