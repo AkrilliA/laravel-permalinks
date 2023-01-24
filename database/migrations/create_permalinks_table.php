@@ -10,7 +10,7 @@ return new class extends Migration
     {
         $tableName = config('permalinks.table', 'permalinks');
 
-        Schema::table($tableName, function (Blueprint $table) {
+        Schema::create($tableName, function (Blueprint $table) {
             $table->uuid('id')->primary();
 
             $table->string('slug')->unique();
