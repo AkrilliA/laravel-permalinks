@@ -1,5 +1,7 @@
 # Laravel Permalinks Package
 
+![assets/banner.png](assets/banner.png)
+
 This package allows you to easily create permalinks for your Laravel application.
 
 ## Installation
@@ -9,7 +11,6 @@ To install the package, simply run the following command in your terminal:
 ```bash
 composer require akrillia/laravel-permalinks
 ```
-
 
 Then, add the service provider to the providers array in your `config/app.php` file:
 
