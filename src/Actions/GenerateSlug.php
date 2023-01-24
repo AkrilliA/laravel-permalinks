@@ -13,7 +13,7 @@ class GenerateSlug
         $slugAppendix = config('permalinks.slug_appendix', 4);
 
         while (Permalink::query()->where('slug', $slug)->exists()) {
-            $slug = Str::slug($name) . '-' . Str::random($slugAppendix);
+            $slug = Str::slug($name).'-'.Str::random($slugAppendix);
         }
 
         return $slug;
